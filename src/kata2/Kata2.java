@@ -20,15 +20,15 @@ public class Kata2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Integer[] data = {1,3,4,6,7,3,4,5,1,3,7,6,3,1,4,7,6,8,3};
+        String[] data = {"Pepe","Juan","Luis","Juan","Pepe","Pepe","Juan","Luis"};
         
         Histogram histo = new Histogram(data);
-        Map<Integer,Integer> histogram = histo.getHistogram();
+        Map<String,Integer> histogram = histo.getHistogram();
             
         
-        Iterator<Map.Entry<Integer,Integer>> entries = histogram.entrySet().iterator();
+        Iterator<Map.Entry<String,Integer>> entries = histogram.entrySet().iterator();
         while(entries.hasNext()){
-            Map.Entry<Integer,Integer> entry = entries.next();
+            Map.Entry<String,Integer> entry = entries.next();
             System.out.println("Key: "+entry.getKey()+", value: "+entry.getValue());
         }
         
